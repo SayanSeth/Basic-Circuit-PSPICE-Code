@@ -1,0 +1,27 @@
+Common Drain
+VS In 0 AC 1 SIN (0 10m 1KHZ)
+VCCVCC  VCC 0 dc 15
+
+rR2 2 0 10000
+rR1 5 0 50000
+cC2 5 Out 5e-006
+cC1 In 2 5e-006
+J1 VCC 2 5 BFW10
+.MODEL BFW10 NJF
++             VTO = -2.3085E+000
++            BETA = 1.09045E-003
++          LAMBDA = 2.31754E-002
++              RD = 7.77648E+000
++              RS = 7.77648E+000
++              IS = 2.59121E-016
++            CGS  = 2.00000E-012
++            CGD  = 2.20000E-012
++              PB = 9.91494E-001
++              FC = 5.00000E-001
+.ENDS
+
+*.TRAN 0M 10M
+.OP
+*.AC DEC 50 1MEG 1000MEG
+
+

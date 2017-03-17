@@ -1,0 +1,27 @@
+Common Source
+VS In 0 AC 1 SIN (0 10m 1KHZ)
+VCCVCC  VCC 0 dc 15
+cC3 4 Out 1e-006
+cC2 In 3 1e-006
+cC1 2 0 1e-006
+rR4 VCC 4 10000
+rR3 VCC 3 2100000
+rR2 3 0 470
+rR1 2 0 1000
+J1 4 3 2 BFW10
+
+.MODEL BFW10 NJF
++             VTO = -2.3085E+000
++            BETA = 1.09045E-003
++          LAMBDA = 2.31754E-002
++              RD = 7.77648E+000
++              RS = 7.77648E+000
++              IS = 2.59121E-016
++            CGS  = 2.00000E-012
++            CGD  = 2.20000E-012
++              PB = 9.91494E-001
++              FC = 5.00000E-001
+.ENDS
+*.TRAN 0M 10M
+.OP
+*.AC DEC 50 10HZ 100MEG
